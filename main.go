@@ -83,5 +83,6 @@ func main() {
 	http.HandleFunc("/view/",makeHandler(viewHandler))
 	http.HandleFunc("/edit/",makeHandler(editHandler))
 	http.HandleFunc("/save/",makeHandler(saveHandler))
+	//上のハンドラーに一致しなかった場合はデフォルトのハンドラーを返す
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
